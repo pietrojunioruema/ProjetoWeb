@@ -15,10 +15,12 @@ public class DashboardCovidApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DashboardCovidApplication.class, args);
 	}
+
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder.build();
 	}
+	
 	@Bean
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 		return args -> {
