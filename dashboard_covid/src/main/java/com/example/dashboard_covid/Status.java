@@ -1,4 +1,5 @@
 package com.example.dashboard_covid;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -14,7 +15,6 @@ public class Status {
     //"cases" : 28779425,
     //"deaths" : 519039,
     //"recovered" : 0
-
     public Status(String country, String last_update, int cases, int deaths, int recovered) {
 		this.country = country;
 		this.last_update = last_update;
