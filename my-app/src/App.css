@@ -3,7 +3,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(57, 43, 83);
+  background-color: rgb(42, 40, 44);
 }
 
 li {
@@ -29,7 +29,8 @@ li a:hover {
 }
 
 body{
-  background-color: #272520;
+  font-family: Sans-serif;
+  background-image: linear-gradient(to right, rgb(0, 0, 0),rgb(51, 43, 43));
   color: #ffffff;
 }
 
@@ -38,7 +39,7 @@ html, body {
 }
 
 .center {
-  border: 2px solid blue;
+  border: 2px solid rgb(255, 255, 255);
   margin: auto;
   position: relative;
   text-align: center;

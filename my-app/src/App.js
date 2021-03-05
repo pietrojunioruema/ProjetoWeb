@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import api from './api';
 import './App.css';
 import { Doughnut } from 'react-chartjs-2';
+import { RiSlideshowLine } from 'react-icons/ri';
+import { RiHandSanitizerLine } from 'react-icons/ri';
+import { AiOutlineQuestionCircle } from 'react-icons/ai';
 class App extends Component {
   state = {
     status: [],
@@ -24,11 +27,12 @@ class App extends Component {
 
     <div class="center"> 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a class="active" href=""><h3>Painel <RiSlideshowLine size={20}/></h3></a></li>
+  <li><a class="active" href=""><h3>Como se proteger <RiHandSanitizerLine size={20}/></h3></a></li>
+  <li><a class="active" href=""><h3>Sobre <AiOutlineQuestionCircle size={20}/></h3></a></li>
+  
 </ul>
+
         {status.map(status => (
           <div>
             <p>
@@ -43,8 +47,8 @@ class App extends Component {
       datasets: [
         {
           data: [status.cases, status.deaths, status.recovered],
-          backgroundColor: ['yellow', 'black', 'green'],
-          hoverBackgroundColor: ['yellow', 'black', 'green']
+          backgroundColor: ['#B0C4DE', '#FFC0CB', '#66CDAA'],
+          hoverBackgroundColor: ['#B0C4DE', '#FFC0CB', '#66CDAA']
         }
       ]
     }} />
