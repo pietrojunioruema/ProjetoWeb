@@ -30,9 +30,7 @@ class App extends Component {
   <li><a class="active" href="/"><h3>Painel <RiSlideshowLine size={20}/></h3></a></li>
   <li><a class="active" href="/"><h3>Como se proteger <RiHandSanitizerLine size={20}/></h3></a></li>
   <li><a class="active" href="/"><h3>Sobre <AiOutlineQuestionCircle size={20}/></h3></a></li>
-  
 </ul>
-
         {status.map(status => (
           <div>
             <p>
