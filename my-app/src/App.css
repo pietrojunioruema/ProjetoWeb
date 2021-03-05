@@ -26,6 +26,9 @@ li a:hover {
 .container {
   width: 300px;
   overflow: auto;
+  margin: auto;
+  position: relative;
+  text-align: center;
 }
 
 body{
@@ -46,3 +49,7 @@ html, body {
   top: 50%;
   width: 50%;  
 }
+
+#box1{ 
+  padding: 20px;
+  }
