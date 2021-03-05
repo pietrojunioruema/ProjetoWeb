@@ -16,25 +16,13 @@ class App extends Component {
     const { status } = this.state;
     //
     //constante do gráfico//
-    const data = {
-      labels: ['Red', 'Green', 'Yellow'],
-      datasets: [
-        {
-          data: [300, 50, 100],
-          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
-        }
-      ]
-    };
+ 
     //
 
 
     return (
 
-    <div >
-
-   
-    
+    <div class="center"> 
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
@@ -43,26 +31,24 @@ class App extends Component {
 </ul>
         {status.map(status => (
           <div>
-
-
+            <p>
+              País: {status.country}
+            </p>
+            <p>
+              Última atualização: {status.last_update}
+            </p>
 <div className="flex flex-col items-center w-full max-w-md"  class="container">
-				<Doughnut data={data} />
+				<Doughnut data={{
+      labels: ['Casos: '+status.cases , 'Mortes: '+status.deaths, 'Recuperados: '+status.recovered],
+      datasets: [
+        {
+          data: [status.cases, status.deaths, status.recovered],
+          backgroundColor: ['yellow', 'black', 'green'],
+          hoverBackgroundColor: ['yellow', 'black', 'green']
+        }
+      ]
+    }} />
 			</div>
-            <p>
-              {status.country}
-            </p>
-            <p>
-              {status.last_update}
-            </p>
-            <p>
-              {status.cases}
-            </p>
-            <p>
-              {status.deaths}
-            </p>
-            <p>
-              {status.recovered}
-            </p>
             </div>
         ))}
       </div>

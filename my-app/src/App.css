@@ -27,3 +27,21 @@ li a:hover {
   width: 300px;
   overflow: auto;
 }
+
+body{
+  background-color: #272520;
+  color: #ffffff;
+}
+
+html, body {
+  height:100%;
+}
+
+.center {
+  border: 2px solid blue;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  width: 50%;  
+}
