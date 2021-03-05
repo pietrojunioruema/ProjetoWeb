@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 import api from './api';
-
+import './App.css';
 class App extends Component {
-
   state = {
     status: [],
   }
-
   async componentDidMount() {
     const response = await api.get('');
 
     this.setState({ status: response.data });
   }
-
   render() {
-
     const { status } = this.state;
-
     return (
-      <div>
-        <h1>Página Principal!</h1>
+    <div>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
         {status.map(status => (
-          <li>
+          <div>
             <p>
               {status.country}
             </p>
@@ -37,11 +37,10 @@ class App extends Component {
             <p>
               {status.recovered}
             </p>
-          </li>
+            </div>
         ))}
       </div>
     );
   };
 };
-
 export default App;
