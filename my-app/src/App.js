@@ -12,7 +12,10 @@ class App extends Component {
     this.setState({ status: response.data });
   }
   render() {
+    //constante do back não mecher.
     const { status } = this.state;
+    //
+    //constante do gráfico//
     const data = {
       labels: ['Red', 'Green', 'Yellow'],
       datasets: [
@@ -23,18 +26,15 @@ class App extends Component {
         }
       ]
     };
-
+    //
 
 
     return (
-    <div>
 
-  <div className="flex flex-col items-center w-full max-w-md">
-				<h2>Doughnut Example</h2>
-				<Doughnut data={data} />
-			</div>
+    <div >
 
-
+   
+    
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
@@ -43,6 +43,11 @@ class App extends Component {
 </ul>
         {status.map(status => (
           <div>
+
+
+<div className="flex flex-col items-center w-full max-w-md"  class="container">
+				<Doughnut data={data} />
+			</div>
             <p>
               {status.country}
             </p>

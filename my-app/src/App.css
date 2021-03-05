@@ -21,3 +21,9 @@ li a {
 li a:hover {
   background-color: rgb(175, 157, 157);
 }
+
+
+.container {
+  width: 300px;
+  overflow: auto;
+}
