@@ -14,25 +14,27 @@ class App extends Component {
 
     this.setState({ status: response.data });
   }
+
   render() {
     //constante do back não mecher.
     const { status } = this.state;
-    //
-    //constante do gráfico//
- 
-    //
+
+
 
 
     return (
 
     <div class="center"> 
-<ul>
-  <li><a class="active" href="/"><h3>Painel <RiSlideshowLine size={20}/></h3></a></li>
-  <li><a class="active" href="/"><h3>Como se proteger <RiHandSanitizerLine size={20}/></h3></a></li>
-  <li><a class="active" href="/"><h3>Sobre <AiOutlineQuestionCircle size={20}/></h3></a></li>
-</ul>
+  <ul>
+    <li><a class="active" href="/"><h3>Painel <RiSlideshowLine size={20}/></h3></a></li>
+    <li><a class="active" href="/"><h3>Como se proteger <RiHandSanitizerLine size={20}/></h3></a></li>
+    <li><a class="active" href="/"><h3>Sobre <AiOutlineQuestionCircle size={20}/></h3></a></li>
+
+  </ul>
         {status.map(status => (
           <div>
+
+
             <p>
               País: {status.country}
             </p>
@@ -52,6 +54,9 @@ class App extends Component {
     }} />
 			</div>
       <div id="box1"></div>
+
+
+
 
             </div>
         ))}
