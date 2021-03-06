@@ -22,7 +22,6 @@ li a:hover {
   background-color: rgb(175, 157, 157);
 }
 
-
 .container {
   width: 300px;
   overflow: auto;
@@ -31,14 +30,15 @@ li a:hover {
   text-align: center;
 }
 
-body{
+body {
   font-family: Sans-serif;
-  background-image: linear-gradient(to right, rgb(0, 0, 0),rgb(51, 43, 43));
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(51, 43, 43));
   color: #ffffff;
 }
 
-html, body {
-  height:100%;
+html,
+body {
+  height: 100%;
 }
 
 .center {
@@ -47,9 +47,9 @@ html, body {
   position: relative;
   text-align: center;
   top: 50%;
-  width: 50%;  
+  width: 50%;
 }
 
-#box1{ 
+#box1 {
   padding: 20px;
-  }
+}
