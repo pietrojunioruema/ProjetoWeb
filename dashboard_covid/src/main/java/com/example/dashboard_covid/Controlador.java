@@ -23,16 +23,12 @@ public class Controlador {
     try {
       arraystatus = objectMapper.readValue((new URL("https://covid19-api.org/api/status")), Status[].class);
     } catch (final JsonParseException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     } catch (final JsonMappingException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     } catch (final MalformedURLException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     } catch (final IOException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
     return arraystatus;

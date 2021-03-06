@@ -7,9 +7,7 @@ import { RiHandSanitizerLine } from "react-icons/ri";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 
 class App extends Component {
-  state = {
-    status: [],
-  };
+  state = {status: [],};
   async componentDidMount() {
     const response = await api.get("");
 
