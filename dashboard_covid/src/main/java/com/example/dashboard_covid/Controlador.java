@@ -16,12 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class Controlador {
   Status[] arraystatus;
+
   @GetMapping("/")
   public Status[] consumindostatus() {
     final ObjectMapper objectMapper = new ObjectMapper();
     try {
-       arraystatus = objectMapper.readValue((new URL("https://covid19-api.org/api/status")), Status[].class);
-     } catch (final JsonParseException e) {
+      arraystatus = objectMapper.readValue((new URL("https://covid19-api.org/api/status")), Status[].class);
+    } catch (final JsonParseException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     } catch (final JsonMappingException e) {
