@@ -5,6 +5,7 @@ import { Doughnut } from "react-chartjs-2";
 import { RiSlideshowLine } from "react-icons/ri";
 import { RiHandSanitizerLine } from "react-icons/ri";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
+
 class App extends Component {
   state = {
     status: [],
@@ -28,14 +29,14 @@ class App extends Component {
             </a>
           </li>
           <li>
-            <a class="active" href="/">
+            <a class="active" href="/comoproteger">
               <h3>
                 Como se proteger <RiHandSanitizerLine size={20} />
               </h3>
             </a>
           </li>
           <li>
-            <a class="active" href="/">
+            <a class="active" href="/sobre">
               <h3>
                 Sobre <AiOutlineQuestionCircle size={20} />
               </h3>
